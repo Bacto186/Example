@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewAppActivity">
+    tools:context=".main.newapp.NewAppActivity">
     <View
-        android:id="@+id/view"
+        android:id="@+id/viewBottomNewApp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/bottom_custom_backgorund"
+        android:background="@drawable/bottom_custom_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
-        android:id="@+id/view2"
+        android:id="@+id/viewTopNewApp"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="@drawable/top_custom_background"
@@ -24,26 +24,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgAndroidNewApp"
         android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/ic_android3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
+        app:layout_constraintTop_toTopOf="@+id/viewTopNewApp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtNameNewApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="New App"
+        android:text="@string/new_app"
         android:textColor="#ffffff"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imgAndroidNewApp" />
 
     <EditText
         android:id="@+id/edtNameApp"
@@ -55,11 +55,11 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:hint="Name App"
+        android:hint="@string/name_new_app"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/viewTopNewApp" />
 
     <EditText
         android:id="@+id/edtDescriptionApp"
@@ -71,7 +71,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:hint="Description knowledge in App"
+        android:hint="@string/description_new_app"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +85,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorAccent"
-        android:text="Save"
+        android:text="@string/save_new_app"
         android:onClick="saveNewApp"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +99,7 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:background="@color/colorAccent"
-        android:text="Cancel"
+        android:text="@string/cancel_new_app"
         android:textSize="18sp"
         android:onClick="cancelNewApp"
         app:layout_constraintEnd_toEndOf="parent"
