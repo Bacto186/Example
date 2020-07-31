@@ -50,4 +50,9 @@ class EditAppActivity : AppCompatActivity() {
         }
         finish()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        job.cancel()
+    }
 }

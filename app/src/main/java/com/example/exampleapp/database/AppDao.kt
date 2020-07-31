@@ -12,7 +12,7 @@ interface AppDao {
     @Delete
     fun delete(app: App)
     @Query("SELECT * from exampleapp WHERE id = :id")
-    fun getApp(id: Int): App
+    fun getApp(id: Int): LiveData<App>
     @Query("SELECT * FROM exampleapp")
     fun getAllApp(): LiveData<List<App>>
     @Query("DELETE FROM exampleapp")

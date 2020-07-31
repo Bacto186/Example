@@ -11,4 +11,6 @@
     <string name="description_new_app">Description knowledge in App</string>
     <string name="save_new_app">Save</string>
     <string name="cancel_new_app">Cancel</string>
+    <string name="roll_label">Roll</string>
+    <string name="dice_roll">Dice Roll!</string>
 </resources>

@@ -3,13 +3,14 @@ package com.example.exampleapp.main
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exampleapp.R
 import com.example.exampleapp.database.App
 
-class AdapterRecyclerView(private val viewModelApp: AppViewModel) : RecyclerView.Adapter<AdapterRecyclerView.ViewHolderRecycleView>() {
+class AdapterRecyclerView(private val viewModelApp: AppViewModel, private val onItemClickListener: OnItemClickListener) : RecyclerView.Adapter<AdapterRecyclerView.ViewHolderRecycleView>() {
     var apps = listOf<App>()
         set(value) {
             field =value
@@ -35,6 +36,9 @@ class AdapterRecyclerView(private val viewModelApp: AppViewModel) : RecyclerView
         holder.btnEdit.setOnClickListener {
             viewModelApp.onEdit(app)
         }
+        holder.itemView.setOnClickListener{
+            onItemClickListener.onItemClicked(app)
+        }
     }
 
     class ViewHolderRecycleView(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -43,4 +47,8 @@ class AdapterRecyclerView(private val viewModelApp: AppViewModel) : RecyclerView
         val btnEdit: Button = itemView.findViewById(R.id.btnEdit)
         val btnDelete: Button = itemView.findViewById(R.id.btnDelete)
     }
+}
+
+interface OnItemClickListener{
+    fun onItemClicked(app: App)
 }
