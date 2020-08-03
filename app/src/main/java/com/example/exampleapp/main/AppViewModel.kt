@@ -6,6 +6,8 @@ import android.content.Intent
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.exampleapp.aboutmeapp.AboutMeActivity
+import com.example.exampleapp.colormyviews.ColorMyViewsActivity
 import com.example.exampleapp.database.AppDao
 import com.example.exampleapp.database.App
 import com.example.exampleapp.dicerollerapp.DiceRollerActivity
@@ -23,10 +25,13 @@ class AppViewModel(dataAppDao: AppDao, application: Application) : ViewModel() {
     val apps = daoApp.getAllApp()
 
     fun onOpenApp(app: App) {
+        val name: String? = app.nameApp
         val id: Int? = app.id
         Toast.makeText(mApplication, "click item $id", Toast.LENGTH_LONG).show()
-        when (id) {
-            8 -> onIntentApp(DiceRollerActivity())
+        when (name) {
+            "Dice Roller" -> onIntentApp(DiceRollerActivity())
+            "About Me" -> onIntentApp(AboutMeActivity())
+            "Color My Views" -> onIntentApp(ColorMyViewsActivity())
         }
     }
     private fun onIntentApp(activity: Activity){

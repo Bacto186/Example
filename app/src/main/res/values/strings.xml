@@ -11,6 +11,34 @@
     <string name="description_new_app">Description knowledge in App</string>
     <string name="save_new_app">Save</string>
     <string name="cancel_new_app">Cancel</string>
+
     <string name="roll_label">Roll</string>
     <string name="dice_roll">Dice Roll!</string>
+
+    <string name="name">Nguyen Huynh Thanh</string>
+    <string name="yellow_star">Red star</string>
+    <string name="bio">Hi, my name is Thanh.
+\n\nI love Dragon.
+\n\nWhen I was young, I watched movies with Dragons, I always admired and liked them. They look very majestic, brave and powerful.
+\nAt that time, I honestly wanted a dragon of my own.
+\n\nLater, I learned that Dragons are not real in the present. They are legends described by previous humans.
+\nSo Dragons in Asia are different from Dragons in Europe. European Dragons have wings, big legs, and torso like dinosaurs. And the Asian Dragon is as long as a snake, has four legs and no wings.
+\n\nPeople still make movies about them today. And they are still fascinating legends when they appear in movies. Viewers, big or small, are still longing to see them once in real life. I myself, too.
+\n\nI want to be strong and proud like a Dragon, to be free to live like them. Want to become great, go into someone\'s legend. I want to be a Dragon.
+\nMy nickname is T66, which means Thanh Dragons.\n\n</string>
+    <string name="what_is_your_nickname">What is your Nickname?</string>
+    <string name="done">Done</string>
+
+    <string name="box_one">Box One</string>
+    <string name="box_two">Box Two</string>
+    <string name="box_three">Box Three</string>
+    <string name="box_four">Box Four</string>
+    <string name="box_five">Box Five</string>
+    <string name="how_to_play">How to play:</string>
+    <string name="tap_the_boxes_and_buttons">Tap the screen and buttons.</string>
+
+    <string name="button_red">RED</string>
+    <string name="button_yellow">YELLOW</string>
+    <string name="button_green">GREEN</string>
+
 </resources>
