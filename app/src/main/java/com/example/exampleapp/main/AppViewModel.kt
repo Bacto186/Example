@@ -7,9 +7,11 @@ import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.exampleapp.aboutmeapp.AboutMeActivity
+import com.example.exampleapp.androidtrivia.AndroidTriviaActivity
 import com.example.exampleapp.colormyviews.ColorMyViewsActivity
 import com.example.exampleapp.database.AppDao
 import com.example.exampleapp.database.App
+import com.example.exampleapp.dessertclicker.DessertClickerActivity
 import com.example.exampleapp.dicerollerapp.DiceRollerActivity
 import kotlinx.coroutines.*
 
@@ -32,6 +34,8 @@ class AppViewModel(dataAppDao: AppDao, application: Application) : ViewModel() {
             "Dice Roller" -> onIntentApp(DiceRollerActivity())
             "About Me" -> onIntentApp(AboutMeActivity())
             "Color My Views" -> onIntentApp(ColorMyViewsActivity())
+            "AndroidTrivia" -> onIntentApp(AndroidTriviaActivity())
+            "Dessert Clicker" -> onIntentApp(DessertClickerActivity())
         }
     }
     private fun onIntentApp(activity: Activity){
