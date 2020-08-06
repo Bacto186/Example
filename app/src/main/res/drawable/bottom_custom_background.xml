@@ -5,7 +5,7 @@
     android:width="360dp"
     android:viewportWidth="360"
     android:viewportHeight="50">
-    <path android:pathData="M360 49.5H0V0C141.892 37.5187 220.493 37.357 360 0V49.5Z">
+    <path android:pathData="M360 50H0V0C141.892 37.5187 220.493 37.357 360 0V50Z">
         <aapt:attr name="android:fillColor">
             <gradient
                 android:type="linear"

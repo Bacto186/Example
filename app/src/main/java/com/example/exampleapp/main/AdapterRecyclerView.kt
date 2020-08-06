@@ -8,9 +8,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exampleapp.R
-import com.example.exampleapp.database.App
 
-class AdapterRecyclerView(private val viewModelApp: AppViewModel, private val onItemClickListener: OnItemClickListener) : RecyclerView.Adapter<AdapterRecyclerView.ViewHolderRecycleView>() {
+class AdapterRecyclerView(private val onItemClickListener: OnItemClickListener) : RecyclerView.Adapter<AdapterRecyclerView.ViewHolderRecycleView>() {
     var apps = listOf<App>()
         set(value) {
             field =value
@@ -27,15 +26,9 @@ class AdapterRecyclerView(private val viewModelApp: AppViewModel, private val on
     override fun getItemCount() = apps.size
 
     override fun onBindViewHolder(holder: ViewHolderRecycleView, position: Int) {
-        val app = apps[position]
+        val app: App = apps[position]
         holder.txtName.text = app.nameApp
-        holder.txtDescription.text = app.descriptionApp
-        holder.btnDelete.setOnClickListener {
-            viewModelApp.onDelete(app)
-        }
-        holder.btnEdit.setOnClickListener {
-            viewModelApp.onEdit(app)
-        }
+        holder.txtDescription.text = app.descriptorApp
         holder.itemView.setOnClickListener{
             onItemClickListener.onItemClicked(app)
         }
@@ -44,8 +37,7 @@ class AdapterRecyclerView(private val viewModelApp: AppViewModel, private val on
     class ViewHolderRecycleView(itemView: View): RecyclerView.ViewHolder(itemView) {
         val txtName: TextView = itemView.findViewById(R.id.nameApp)
         val txtDescription: TextView = itemView.findViewById(R.id.descriptionApp)
-        val btnEdit: Button = itemView.findViewById(R.id.btnEdit)
-        val btnDelete: Button = itemView.findViewById(R.id.btnDelete)
+
     }
 }
 
