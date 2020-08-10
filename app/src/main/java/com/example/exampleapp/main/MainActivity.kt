@@ -14,6 +14,7 @@ import com.example.exampleapp.androidtrivia.AndroidTriviaActivity
 import com.example.exampleapp.colormyviews.ColorMyViewsActivity
 import com.example.exampleapp.dessertclicker.DessertClickerActivity
 import com.example.exampleapp.dicerollerapp.DiceRollerActivity
+import com.example.exampleapp.guesstheword.GuessTheWordActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), OnItemClickListener {
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         apps.add(App(idApp = 2, nameApp = "Color My view", descriptorApp = "Constraint layout"))
         apps.add(App(idApp = 3, nameApp = "AndroidTrivia", descriptorApp = "Fragment, navigation path, menu, up button, change the back button, navigation drawer"))
         apps.add(App(idApp = 4, nameApp = "Dessert Clicker", descriptorApp = "Lifecycle UI, Timber"))
+        apps.add(App(idApp = 5, nameApp = "Guess The Word", descriptorApp = "ViewModel, LiveData"))
 
         adapter.apps = apps
         recyclerView.adapter = adapter
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             2 -> onIntentApp(ColorMyViewsActivity())
             3 -> onIntentApp(AndroidTriviaActivity())
             4 -> onIntentApp(DessertClickerActivity())
+            5 -> onIntentApp(GuessTheWordActivity())
         }
     }
 

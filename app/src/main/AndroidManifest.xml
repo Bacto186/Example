@@ -3,27 +3,35 @@
     package="com.example.exampleapp">
 
     <application
-        android:allowBackup="true"
         android:name=".dessertclicker.ClickerApplication"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_dragon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_dragon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dessertclicker.DessertClickerActivity"
-            android:label="Dessert Clicker"/>
-        <activity android:name=".androidtrivia.AndroidTriviaActivity"
-            android:label="Android Trivia"/>
-        <activity android:name=".colormyviews.ColorMyViewsActivity"
-            android:label="Color My Views"/>
-        <activity android:name=".aboutmeapp.AboutMeActivity"
-            android:label="About Me"/>
-        <activity android:name=".dicerollerapp.DiceRollerActivity"
-            android:label="Dice Roller"/>
-        <activity android:name=".main.MainActivity"
+        <activity android:name=".guesstheword.GuessTheWordActivity"></activity>
+        <activity
+            android:name=".dessertclicker.DessertClickerActivity"
+            android:label="Dessert Clicker" />
+        <activity
+            android:name=".androidtrivia.AndroidTriviaActivity"
+            android:label="Android Trivia" />
+        <activity
+            android:name=".colormyviews.ColorMyViewsActivity"
+            android:label="Color My Views" />
+        <activity
+            android:name=".aboutmeapp.AboutMeActivity"
+            android:label="About Me" />
+        <activity
+            android:name=".dicerollerapp.DiceRollerActivity"
+            android:label="Dice Roller" />
+        <activity
+            android:name=".main.MainActivity"
             android:theme="@style/MainTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
