@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_dragon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".guesstheword.GuessTheWordActivity"></activity>
+        <activity android:name=".trackmysleep.TrackMySleepQualityActivity"
+            android:label="Track My Sleep Quality"/>
+        <activity android:name=".guesstheword.GuessTheWordActivity"
+            android:label="Guess the Word"/>
         <activity
             android:name=".dessertclicker.DessertClickerActivity"
             android:label="Dessert Clicker" />
